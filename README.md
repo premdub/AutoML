@@ -4,7 +4,7 @@ HHA507_assignment_9
 Experiment #1
 Data Source:  Healthcare Associated Infections (https://query.data.world/s/lcc3wkldiuom2xid5xlcn3bqpkk263')
 
-Focus on classification (binary or multi-class outcome variable)
+Focus on classification (binary or multi-class outcome variable):
 
 Measure ID (categorical)
 
@@ -31,7 +31,8 @@ Compared to Baseline, the model performed the best
 ---------------------------------------------------------------------------------------------------------------------------------------------
 2. Experiment #2
 Data Source: Life Expectancy (WHO) Statistical Analysis on factors influencing Life Expectancy (LifeExpectancyData.csv)
-focus around regression (continuous outcome variable) 
+
+focus around regression (continuous outcome variable) :
 
  Country
  
