@@ -1,0 +1,629 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Linear",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.06926918029785156
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 1.6765520572662354
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 11.106444835662842
+            },
+            {
+                "model_name": "3_Linear",
+                "model_type": "Linear",
+                "fit_level": "simple_algorithms",
+                "train_time": 4.020636081695557
+            },
+            {
+                "model_name": "4_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 40.70343804359436
+            },
+            {
+                "model_name": "5_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 1.8724167346954346
+            },
+            {
+                "model_name": "6_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 12.17696475982666
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 0.2944047451019287
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 9.463263868485429,
+                "train_time": 2.026228904724121,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Status": [
+                            "categorical_to_int"
+                        ],
+                        "Alcohol": [
+                            "na_fill_median"
+                        ],
+                        "Hepatitis B": [
+                            "na_fill_median"
+                        ],
+                        " BMI ": [
+                            "na_fill_median"
+                        ],
+                        "Polio": [
+                            "na_fill_median"
+                        ],
+                        "Total expenditure": [
+                            "na_fill_median"
+                        ],
+                        "Diphtheria ": [
+                            "na_fill_median"
+                        ],
+                        "GDP": [
+                            "na_fill_median"
+                        ],
+                        "Population": [
+                            "na_fill_median"
+                        ],
+                        " thinness  1-19 years": [
+                            "na_fill_median"
+                        ],
+                        " thinness 5-9 years": [
+                            "na_fill_median"
+                        ],
+                        "Income composition of resources": [
+                            "na_fill_median"
+                        ],
+                        "Schooling": [
+                            "na_fill_median"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "mse",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 3.908259930088502,
+                "train_time": 11.926516056060791,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Country": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Year": [
+                            "scale_normal"
+                        ],
+                        "Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Adult Mortality": [
+                            "scale_normal"
+                        ],
+                        "infant deaths": [
+                            "scale_normal"
+                        ],
+                        "Alcohol": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "percentage expenditure": [
+                            "scale_normal"
+                        ],
+                        "Hepatitis B": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Measles ": [
+                            "scale_normal"
+                        ],
+                        " BMI ": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "under-five deaths ": [
+                            "scale_normal"
+                        ],
+                        "Polio": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Total expenditure": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Diphtheria ": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " HIV/AIDS": [
+                            "scale_normal"
+                        ],
+                        "GDP": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Population": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " thinness  1-19 years": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " thinness 5-9 years": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Income composition of resources": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Schooling": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Linear",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "3_Linear",
+                "status": "trained",
+                "final_loss": 4.060395588526553,
+                "train_time": 4.856674432754517,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Status": [
+                            "categorical_to_int"
+                        ],
+                        "Alcohol": [
+                            "na_fill_median"
+                        ],
+                        "Hepatitis B": [
+                            "na_fill_median"
+                        ],
+                        " BMI ": [
+                            "na_fill_median"
+                        ],
+                        "Polio": [
+                            "na_fill_median"
+                        ],
+                        "Total expenditure": [
+                            "na_fill_median"
+                        ],
+                        "Diphtheria ": [
+                            "na_fill_median"
+                        ],
+                        "GDP": [
+                            "na_fill_median"
+                        ],
+                        "Population": [
+                            "na_fill_median"
+                        ],
+                        " thinness  1-19 years": [
+                            "na_fill_median"
+                        ],
+                        " thinness 5-9 years": [
+                            "na_fill_median"
+                        ],
+                        "Income composition of resources": [
+                            "na_fill_median"
+                        ],
+                        "Schooling": [
+                            "na_fill_median"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "objective": "reg:squarederror",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 4,
+                    "eval_metric": "rmse",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "4_Default_Xgboost",
+                "status": "trained",
+                "final_loss": 1.7561441671862772,
+                "train_time": 41.56306719779968,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Country": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Year": [
+                            "scale_normal"
+                        ],
+                        "Status": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Adult Mortality": [
+                            "scale_normal"
+                        ],
+                        "infant deaths": [
+                            "scale_normal"
+                        ],
+                        "Alcohol": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "percentage expenditure": [
+                            "scale_normal"
+                        ],
+                        "Hepatitis B": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Measles ": [
+                            "scale_normal"
+                        ],
+                        " BMI ": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "under-five deaths ": [
+                            "scale_normal"
+                        ],
+                        "Polio": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Total expenditure": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Diphtheria ": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " HIV/AIDS": [
+                            "scale_normal"
+                        ],
+                        "GDP": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Population": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " thinness  1-19 years": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        " thinness 5-9 years": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Income composition of resources": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ],
+                        "Schooling": [
+                            "na_fill_median",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 5,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "5_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 2.446644203228202,
+                "train_time": 2.4821276664733887,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Country": [
+                            "categorical_to_int"
+                        ],
+                        "Status": [
+                            "categorical_to_int"
+                        ],
+                        "Alcohol": [
+                            "na_fill_median"
+                        ],
+                        "Hepatitis B": [
+                            "na_fill_median"
+                        ],
+                        " BMI ": [
+                            "na_fill_median"
+                        ],
+                        "Polio": [
+                            "na_fill_median"
+                        ],
+                        "Total expenditure": [
+                            "na_fill_median"
+                        ],
+                        "Diphtheria ": [
+                            "na_fill_median"
+                        ],
+                        "GDP": [
+                            "na_fill_median"
+                        ],
+                        "Population": [
+                            "na_fill_median"
+                        ],
+                        " thinness  1-19 years": [
+                            "na_fill_median"
+                        ],
+                        " thinness 5-9 years": [
+                            "na_fill_median"
+                        ],
+                        "Income composition of resources": [
+                            "na_fill_median"
+                        ],
+                        "Schooling": [
+                            "na_fill_median"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "X_path": "Life_expectancy_regression/X.data",
+                    "y_path": "Life_expectancy_regression/y.data",
+                    "results_path": "Life_expectancy_regression"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "criterion": "mse",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 6,
+                    "eval_metric_name": "rmse",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "6_Default_RandomForest",
+                "status": "trained",
+                "final_loss": 2.8029003835127297,
+                "train_time": 13.04069972038269,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 1.7432607136332583,
+                "train_time": 0.2944047451019287
+            }
+        ]
+    },
+    "adjust_validation": false
+}

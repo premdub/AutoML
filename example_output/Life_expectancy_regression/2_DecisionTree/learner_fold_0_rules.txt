@@ -1,0 +1,16 @@
+if ( HIV/AIDS <= 0.75) and (Income composition of resources > 0.644) and (Income composition of resources <= 0.836) then response: 74.116 | based on 904 samples
+
+if ( HIV/AIDS <= 0.75) and (Income composition of resources > 0.644) and (Income composition of resources > 0.836) then response: 81.188 | based on 295 samples
+
+if ( HIV/AIDS <= 0.75) and (Income composition of resources <= 0.644) and (Adult Mortality <= 198.5) then response: 69.582 | based on 272 samples
+
+if ( HIV/AIDS > 0.75) and (Adult Mortality <= 331.5) and (under-five deaths  <= 24.5) then response: 63.134 | based on 190 samples
+
+if ( HIV/AIDS > 0.75) and (Adult Mortality > 331.5) and (Adult Mortality <= 493.0) then response: 53.794 | based on 181 samples
+
+if ( HIV/AIDS <= 0.75) and (Income composition of resources <= 0.644) and (Adult Mortality > 198.5) then response: 63.365 | based on 172 samples
+
+if ( HIV/AIDS > 0.75) and (Adult Mortality <= 331.5) and (under-five deaths  > 24.5) then response: 55.291 | based on 138 samples
+
+if ( HIV/AIDS > 0.75) and (Adult Mortality > 331.5) and (Adult Mortality > 493.0) then response: 47.141 | based on 44 samples
+

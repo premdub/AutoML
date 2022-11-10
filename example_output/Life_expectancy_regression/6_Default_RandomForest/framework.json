@@ -1,0 +1,417 @@
+{
+    "uid": "dea94fcd-58b7-461e-a6d5-70fee0d26a9e",
+    "name": "6_Default_RandomForest",
+    "preprocessing": [
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "Alcohol": 3.83,
+                        "Hepatitis B": 92.0,
+                        " BMI ": 43.9,
+                        "Polio": 93.0,
+                        "Total expenditure": 5.76,
+                        "Diphtheria ": 93.0,
+                        "GDP": 1855.93915,
+                        "Population": 1366667.0,
+                        " thinness  1-19 years": 3.3,
+                        " thinness 5-9 years": 3.3,
+                        "Income composition of resources": 0.68,
+                        "Schooling": 12.4
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "Country": {
+                            "Afghanistan": 0,
+                            "Albania": 1,
+                            "Algeria": 2,
+                            "Angola": 3,
+                            "Antigua and Barbuda": 4,
+                            "Argentina": 5,
+                            "Armenia": 6,
+                            "Australia": 7,
+                            "Austria": 8,
+                            "Azerbaijan": 9,
+                            "Bahamas": 10,
+                            "Bahrain": 11,
+                            "Bangladesh": 12,
+                            "Barbados": 13,
+                            "Belarus": 14,
+                            "Belgium": 15,
+                            "Belize": 16,
+                            "Benin": 17,
+                            "Bhutan": 18,
+                            "Bolivia (Plurinational State of)": 19,
+                            "Bosnia and Herzegovina": 20,
+                            "Botswana": 21,
+                            "Brazil": 22,
+                            "Brunei Darussalam": 23,
+                            "Bulgaria": 24,
+                            "Burkina Faso": 25,
+                            "Burundi": 26,
+                            "Cabo Verde": 27,
+                            "Cambodia": 28,
+                            "Cameroon": 29,
+                            "Canada": 30,
+                            "Central African Republic": 31,
+                            "Chad": 32,
+                            "Chile": 33,
+                            "China": 34,
+                            "Colombia": 35,
+                            "Comoros": 36,
+                            "Congo": 37,
+                            "Costa Rica": 38,
+                            "Croatia": 39,
+                            "Cuba": 40,
+                            "Cyprus": 41,
+                            "Czechia": 42,
+                            "C\u00f4te d'Ivoire": 43,
+                            "Democratic People's Republic of Korea": 44,
+                            "Democratic Republic of the Congo": 45,
+                            "Denmark": 46,
+                            "Djibouti": 47,
+                            "Dominican Republic": 48,
+                            "Ecuador": 49,
+                            "Egypt": 50,
+                            "El Salvador": 51,
+                            "Equatorial Guinea": 52,
+                            "Eritrea": 53,
+                            "Estonia": 54,
+                            "Ethiopia": 55,
+                            "Fiji": 56,
+                            "Finland": 57,
+                            "France": 58,
+                            "Gabon": 59,
+                            "Gambia": 60,
+                            "Georgia": 61,
+                            "Germany": 62,
+                            "Ghana": 63,
+                            "Greece": 64,
+                            "Grenada": 65,
+                            "Guatemala": 66,
+                            "Guinea": 67,
+                            "Guinea-Bissau": 68,
+                            "Guyana": 69,
+                            "Haiti": 70,
+                            "Honduras": 71,
+                            "Hungary": 72,
+                            "Iceland": 73,
+                            "India": 74,
+                            "Indonesia": 75,
+                            "Iran (Islamic Republic of)": 76,
+                            "Iraq": 77,
+                            "Ireland": 78,
+                            "Israel": 79,
+                            "Italy": 80,
+                            "Jamaica": 81,
+                            "Japan": 82,
+                            "Jordan": 83,
+                            "Kazakhstan": 84,
+                            "Kenya": 85,
+                            "Kiribati": 86,
+                            "Kuwait": 87,
+                            "Kyrgyzstan": 88,
+                            "Lao People's Democratic Republic": 89,
+                            "Latvia": 90,
+                            "Lebanon": 91,
+                            "Lesotho": 92,
+                            "Liberia": 93,
+                            "Libya": 94,
+                            "Lithuania": 95,
+                            "Luxembourg": 96,
+                            "Madagascar": 97,
+                            "Malawi": 98,
+                            "Malaysia": 99,
+                            "Maldives": 100,
+                            "Mali": 101,
+                            "Malta": 102,
+                            "Mauritania": 103,
+                            "Mauritius": 104,
+                            "Mexico": 105,
+                            "Micronesia (Federated States of)": 106,
+                            "Mongolia": 107,
+                            "Montenegro": 108,
+                            "Morocco": 109,
+                            "Mozambique": 110,
+                            "Myanmar": 111,
+                            "Namibia": 112,
+                            "Nepal": 113,
+                            "Netherlands": 114,
+                            "New Zealand": 115,
+                            "Nicaragua": 116,
+                            "Niger": 117,
+                            "Nigeria": 118,
+                            "Norway": 119,
+                            "Oman": 120,
+                            "Pakistan": 121,
+                            "Panama": 122,
+                            "Papua New Guinea": 123,
+                            "Paraguay": 124,
+                            "Peru": 125,
+                            "Philippines": 126,
+                            "Poland": 127,
+                            "Portugal": 128,
+                            "Qatar": 129,
+                            "Republic of Korea": 130,
+                            "Republic of Moldova": 131,
+                            "Romania": 132,
+                            "Russian Federation": 133,
+                            "Rwanda": 134,
+                            "Saint Lucia": 135,
+                            "Saint Vincent and the Grenadines": 136,
+                            "Samoa": 137,
+                            "Sao Tome and Principe": 138,
+                            "Saudi Arabia": 139,
+                            "Senegal": 140,
+                            "Serbia": 141,
+                            "Seychelles": 142,
+                            "Sierra Leone": 143,
+                            "Singapore": 144,
+                            "Slovakia": 145,
+                            "Slovenia": 146,
+                            "Solomon Islands": 147,
+                            "Somalia": 148,
+                            "South Africa": 149,
+                            "South Sudan": 150,
+                            "Spain": 151,
+                            "Sri Lanka": 152,
+                            "Sudan": 153,
+                            "Suriname": 154,
+                            "Swaziland": 155,
+                            "Sweden": 156,
+                            "Switzerland": 157,
+                            "Syrian Arab Republic": 158,
+                            "Tajikistan": 159,
+                            "Thailand": 160,
+                            "The former Yugoslav republic of Macedonia": 161,
+                            "Timor-Leste": 162,
+                            "Togo": 163,
+                            "Tonga": 164,
+                            "Trinidad and Tobago": 165,
+                            "Tunisia": 166,
+                            "Turkey": 167,
+                            "Turkmenistan": 168,
+                            "Uganda": 169,
+                            "Ukraine": 170,
+                            "United Arab Emirates": 171,
+                            "United Kingdom of Great Britain and Northern Ireland": 172,
+                            "United Republic of Tanzania": 173,
+                            "United States of America": 174,
+                            "Uruguay": 175,
+                            "Uzbekistan": 176,
+                            "Vanuatu": 177,
+                            "Venezuela (Bolivarian Republic of)": 178,
+                            "Viet Nam": 179,
+                            "Yemen": 180,
+                            "Zambia": 181,
+                            "Zimbabwe": 182
+                        },
+                        "Status": {
+                            "Developed": 0,
+                            "Developing": 1
+                        }
+                    },
+                    "columns": [
+                        "Country",
+                        "Status"
+                    ]
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    9.542369093001694
+                ],
+                "mean": [
+                    69.31366120218578
+                ],
+                "var": [
+                    91.05680790707396
+                ],
+                "n_samples_seen": 2196,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_normal"
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "Country": [
+                        "categorical_to_int"
+                    ],
+                    "Status": [
+                        "categorical_to_int"
+                    ],
+                    "Alcohol": [
+                        "na_fill_median"
+                    ],
+                    "Hepatitis B": [
+                        "na_fill_median"
+                    ],
+                    " BMI ": [
+                        "na_fill_median"
+                    ],
+                    "Polio": [
+                        "na_fill_median"
+                    ],
+                    "Total expenditure": [
+                        "na_fill_median"
+                    ],
+                    "Diphtheria ": [
+                        "na_fill_median"
+                    ],
+                    "GDP": [
+                        "na_fill_median"
+                    ],
+                    "Population": [
+                        "na_fill_median"
+                    ],
+                    " thinness  1-19 years": [
+                        "na_fill_median"
+                    ],
+                    " thinness 5-9 years": [
+                        "na_fill_median"
+                    ],
+                    "Income composition of resources": [
+                        "na_fill_median"
+                    ],
+                    "Schooling": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.0.2",
+            "algorithm_name": "Random Forest",
+            "algorithm_short_name": "Random Forest",
+            "uid": "7a6c7b89-7241-4f6f-973f-4f757cbc9c7b",
+            "params": {
+                "model_type": "Random Forest",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "criterion": "mse",
+                "max_features": 0.9,
+                "min_samples_split": 30,
+                "max_depth": 4,
+                "seed": 6,
+                "eval_metric_name": "rmse",
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 100,
+            "train_cant_improve_limit": 1,
+            "min_steps": 1,
+            "max_steps": 50,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "Country": [
+                    "categorical_to_int"
+                ],
+                "Status": [
+                    "categorical_to_int"
+                ],
+                "Alcohol": [
+                    "na_fill_median"
+                ],
+                "Hepatitis B": [
+                    "na_fill_median"
+                ],
+                " BMI ": [
+                    "na_fill_median"
+                ],
+                "Polio": [
+                    "na_fill_median"
+                ],
+                "Total expenditure": [
+                    "na_fill_median"
+                ],
+                "Diphtheria ": [
+                    "na_fill_median"
+                ],
+                "GDP": [
+                    "na_fill_median"
+                ],
+                "Population": [
+                    "na_fill_median"
+                ],
+                " thinness  1-19 years": [
+                    "na_fill_median"
+                ],
+                " thinness 5-9 years": [
+                    "na_fill_median"
+                ],
+                "Income composition of resources": [
+                    "na_fill_median"
+                ],
+                "Schooling": [
+                    "na_fill_median"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "Life_expectancy_regression/X.data",
+            "y_path": "Life_expectancy_regression/y.data",
+            "results_path": "Life_expectancy_regression"
+        },
+        "learner": {
+            "model_type": "Random Forest",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "criterion": "mse",
+            "max_features": 0.9,
+            "min_samples_split": 30,
+            "max_depth": 4,
+            "seed": 6,
+            "eval_metric_name": "rmse",
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "6_Default_RandomForest",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "6_Default_RandomForest/learner_fold_0.random_forest"
+    ],
+    "predictions_fname": "6_Default_RandomForest/predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 2.8029003835127297,
+    "train_time": 12.17696475982666,
+    "is_stacked": false
+}

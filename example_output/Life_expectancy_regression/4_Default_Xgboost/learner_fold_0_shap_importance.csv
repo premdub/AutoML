@@ -1,0 +1,22 @@
+feature,shap_importance
+ HIV/AIDS,0.4519549
+Income composition of resources,0.20615345
+Adult Mortality,0.19763821
+under-five deaths ,0.059885465
+ thinness 5-9 years,0.03394632
+Year,0.030382887
+Schooling,0.026867673
+ BMI ,0.021895966
+Diphtheria ,0.017111724
+Alcohol,0.017055517
+percentage expenditure,0.016593292
+Country,0.014145156
+Total expenditure,0.013178991
+ thinness  1-19 years,0.012644301
+Measles ,0.011784456
+Polio,0.011588939
+Hepatitis B,0.009537157
+GDP,0.008689424
+Population,0.008078048
+infant deaths,0.0077130715
+Status,0.00270713

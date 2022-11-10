@@ -1,0 +1,112 @@
+{
+    "columns": [
+        "Country",
+        "Year",
+        "Status",
+        "Adult Mortality",
+        "infant deaths",
+        "Alcohol",
+        "percentage expenditure",
+        "Hepatitis B",
+        "Measles ",
+        " BMI ",
+        "under-five deaths ",
+        "Polio",
+        "Total expenditure",
+        "Diphtheria ",
+        " HIV/AIDS",
+        "GDP",
+        "Population",
+        " thinness  1-19 years",
+        " thinness 5-9 years",
+        "Income composition of resources",
+        "Schooling"
+    ],
+    "rows": 2928,
+    "cols": 21,
+    "target_is_numeric": true,
+    "columns_info": {
+        "Country": [
+            "categorical",
+            "many_categories"
+        ],
+        "Year": [
+            "scale"
+        ],
+        "Status": [
+            "categorical",
+            "few_categories"
+        ],
+        "Adult Mortality": [
+            "scale"
+        ],
+        "infant deaths": [
+            "scale"
+        ],
+        "Alcohol": [
+            "missing_values",
+            "scale"
+        ],
+        "percentage expenditure": [
+            "scale"
+        ],
+        "Hepatitis B": [
+            "missing_values",
+            "scale"
+        ],
+        "Measles ": [
+            "scale"
+        ],
+        " BMI ": [
+            "missing_values",
+            "scale"
+        ],
+        "under-five deaths ": [
+            "scale"
+        ],
+        "Polio": [
+            "missing_values",
+            "scale"
+        ],
+        "Total expenditure": [
+            "missing_values",
+            "scale"
+        ],
+        "Diphtheria ": [
+            "missing_values",
+            "scale"
+        ],
+        " HIV/AIDS": [
+            "scale"
+        ],
+        "GDP": [
+            "missing_values",
+            "scale"
+        ],
+        "Population": [
+            "missing_values",
+            "scale"
+        ],
+        " thinness  1-19 years": [
+            "missing_values",
+            "scale"
+        ],
+        " thinness 5-9 years": [
+            "missing_values",
+            "scale"
+        ],
+        "Income composition of resources": [
+            "missing_values",
+            "scale"
+        ],
+        "Schooling": [
+            "missing_values",
+            "scale"
+        ]
+    },
+    "target_info": [
+        "scale"
+    ],
+    "n_features": 21,
+    "is_sample_weighted": false
+}
