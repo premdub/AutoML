@@ -1,0 +1,485 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble"
+        ],
+        "algorithms": [
+            "Baseline",
+            "Decision Tree",
+            "Random Forest",
+            "Xgboost",
+            "Neural Network"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 6.029064893722534
+            },
+            {
+                "model_name": "1_Baseline",
+                "model_type": "Baseline",
+                "fit_level": "simple_algorithms",
+                "train_time": 2.803226947784424
+            },
+            {
+                "model_name": "2_DecisionTree",
+                "model_type": "Decision Tree",
+                "fit_level": "simple_algorithms",
+                "train_time": 35.04306244850159
+            },
+            {
+                "model_name": "3_Default_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 160.14833974838257
+            },
+            {
+                "model_name": "4_Default_NeuralNetwork",
+                "model_type": "Neural Network",
+                "fit_level": "default_algorithms",
+                "train_time": 46.66787886619568
+            },
+            {
+                "model_name": "5_Default_RandomForest",
+                "model_type": "Random Forest",
+                "fit_level": "default_algorithms",
+                "train_time": 34.95052433013916
+            },
+            {
+                "model_name": "Ensemble",
+                "model_type": "Ensemble",
+                "fit_level": "ensemble",
+                "train_time": 2.845127820968628
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": false
+    },
+    "all_params": {
+        "simple_algorithms": [
+            {
+                "additional": {
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Measure End Date": [
+                            "remove_column"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "HAI_binary_los/X.data",
+                    "y_path": "HAI_binary_los/y.data",
+                    "results_path": "HAI_binary_los"
+                },
+                "learner": {
+                    "model_type": "Baseline",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "1_Baseline",
+                "status": "trained",
+                "final_loss": 0.32871166998799783,
+                "train_time": 3.8964550495147705,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 1,
+                    "train_cant_improve_limit": 0,
+                    "max_steps": 1,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Hospital Name": [
+                            "categorical_to_int"
+                        ],
+                        "Address": [
+                            "categorical_to_int"
+                        ],
+                        "City": [
+                            "categorical_to_int"
+                        ],
+                        "State": [
+                            "categorical_to_int"
+                        ],
+                        "County Name": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Name": [
+                            "categorical_to_int"
+                        ],
+                        "Measure ID": [
+                            "categorical_to_int"
+                        ],
+                        "Compared to National": [
+                            "categorical_to_int"
+                        ],
+                        "Footnote": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Start Date": [
+                            "categorical_to_int"
+                        ],
+                        "Measure End Date": [
+                            "remove_column"
+                        ],
+                        "Location": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "HAI_binary_los/X.data",
+                    "y_path": "HAI_binary_los/y.data",
+                    "results_path": "HAI_binary_los"
+                },
+                "learner": {
+                    "model_type": "Decision Tree",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "criterion": "gini",
+                    "max_depth": 3,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "2_DecisionTree",
+                "status": "trained",
+                "final_loss": 0.21042316996085864,
+                "train_time": 36.63444471359253,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Hospital Name": [
+                            "categorical_to_int"
+                        ],
+                        "Address": [
+                            "categorical_to_int"
+                        ],
+                        "City": [
+                            "categorical_to_int"
+                        ],
+                        "State": [
+                            "categorical_to_int"
+                        ],
+                        "County Name": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Name": [
+                            "categorical_to_int"
+                        ],
+                        "Measure ID": [
+                            "categorical_to_int"
+                        ],
+                        "Compared to National": [
+                            "categorical_to_int"
+                        ],
+                        "Footnote": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Start Date": [
+                            "categorical_to_int"
+                        ],
+                        "Measure End Date": [
+                            "remove_column"
+                        ],
+                        "Location": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "HAI_binary_los/X.data",
+                    "y_path": "HAI_binary_los/y.data",
+                    "results_path": "HAI_binary_los"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary:logistic",
+                    "eta": 0.075,
+                    "max_depth": 6,
+                    "min_child_weight": 1,
+                    "subsample": 1.0,
+                    "colsample_bytree": 1.0,
+                    "seed": 3,
+                    "eval_metric": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "3_Default_Xgboost",
+                "status": "trained",
+                "final_loss": 0.028793867354543312,
+                "train_time": 161.8279731273651,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Provider ID": [
+                            "scale_normal"
+                        ],
+                        "Hospital Name": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Address": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "City": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "State": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "ZIP Code": [
+                            "scale_normal"
+                        ],
+                        "County Name": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Phone Number": [
+                            "scale_normal"
+                        ],
+                        "Measure Name": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Measure ID": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Compared to National": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Footnote": [
+                            "na_fill_median",
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Measure Start Date": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ],
+                        "Measure End Date": [
+                            "remove_column"
+                        ],
+                        "Location": [
+                            "categorical_to_int",
+                            "scale_normal"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "HAI_binary_los/X.data",
+                    "y_path": "HAI_binary_los/y.data",
+                    "results_path": "HAI_binary_los"
+                },
+                "learner": {
+                    "model_type": "Neural Network",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "dense_1_size": 32,
+                    "dense_2_size": 16,
+                    "learning_rate": 0.05,
+                    "seed": 4,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "4_Default_NeuralNetwork",
+                "status": "trained",
+                "final_loss": 0.2251006506841934,
+                "train_time": 48.14454388618469,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            },
+            {
+                "additional": {
+                    "trees_in_step": 100,
+                    "train_cant_improve_limit": 1,
+                    "min_steps": 1,
+                    "max_steps": 50,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {
+                        "Hospital Name": [
+                            "categorical_to_int"
+                        ],
+                        "Address": [
+                            "categorical_to_int"
+                        ],
+                        "City": [
+                            "categorical_to_int"
+                        ],
+                        "State": [
+                            "categorical_to_int"
+                        ],
+                        "County Name": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Name": [
+                            "categorical_to_int"
+                        ],
+                        "Measure ID": [
+                            "categorical_to_int"
+                        ],
+                        "Compared to National": [
+                            "categorical_to_int"
+                        ],
+                        "Footnote": [
+                            "na_fill_median",
+                            "categorical_to_int"
+                        ],
+                        "Measure Start Date": [
+                            "categorical_to_int"
+                        ],
+                        "Measure End Date": [
+                            "remove_column"
+                        ],
+                        "Location": [
+                            "categorical_to_int"
+                        ]
+                    },
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "categorical_to_int"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "split",
+                    "train_ratio": 0.75,
+                    "shuffle": true,
+                    "stratify": true,
+                    "X_path": "HAI_binary_los/X.data",
+                    "y_path": "HAI_binary_los/y.data",
+                    "results_path": "HAI_binary_los"
+                },
+                "learner": {
+                    "model_type": "Random Forest",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "criterion": "gini",
+                    "max_features": 0.9,
+                    "min_samples_split": 30,
+                    "max_depth": 4,
+                    "seed": 5,
+                    "eval_metric_name": "logloss",
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 2,
+                "name": "5_Default_RandomForest",
+                "status": "trained",
+                "final_loss": 0.16024803349154554,
+                "train_time": 36.60101008415222,
+                "data_type": "original",
+                "max_time_for_learner": 360.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "trained",
+                "final_loss": 0.028793867354543312,
+                "train_time": 2.845127820968628
+            }
+        ]
+    },
+    "adjust_validation": false
+}

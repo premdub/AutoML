@@ -1,0 +1,15 @@
+feature,shap_importance
+Compared to National,4.455687
+Measure Name,3.1229186
+Measure ID,2.9409714
+Footnote,0.8470123
+Provider ID,0.4541554
+Hospital Name,0.41837922
+ZIP Code,0.35657266
+City,0.32933655
+County Name,0.30700642
+Phone Number,0.30325925
+Address,0.26387268
+Location,0.21948521
+State,0.19809979
+Measure Start Date,0.016598333

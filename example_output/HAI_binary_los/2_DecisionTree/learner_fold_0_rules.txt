@@ -1,0 +1,14 @@
+if (Compared to National > 1.5) and (Compared to National <= 2.5) then class: Low-infection-rate (proba: 100.0%) | based on 68,226 samples
+
+if (Compared to National <= 1.5) and (Measure Name > 3.5) and (Measure Name > 21.5) then class: Low-infection-rate (proba: 88.25%) | based on 25,266 samples
+
+if (Compared to National <= 1.5) and (Measure Name > 3.5) and (Measure Name <= 21.5) then class: Low-infection-rate (proba: 74.59%) | based on 22,461 samples
+
+if (Compared to National <= 1.5) and (Measure Name <= 3.5) and (Measure ID > 43.0) then class: High-infection-rate (proba: 63.88%) | based on 4,895 samples
+
+if (Compared to National > 1.5) and (Compared to National > 2.5) and (Measure ID <= 43.5) then class: Low-infection-rate (proba: 79.31%) | based on 2,194 samples
+
+if (Compared to National <= 1.5) and (Measure Name <= 3.5) and (Measure ID <= 43.0) then class: Low-infection-rate (proba: 100.0%) | based on 1,605 samples
+
+if (Compared to National > 1.5) and (Compared to National > 2.5) and (Measure ID > 43.5) then class: High-infection-rate (proba: 68.21%) | based on 714 samples
+
