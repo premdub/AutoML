@@ -6,7 +6,9 @@ Data Source:  Healthcare Associated Infections
 Focus on classification (binary or multi-class outcome variable)
 
 Measure ID (categorical)
+
 Compared to National (continuous)
+
 score
 
 The variable tested was score
