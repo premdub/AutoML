@@ -31,9 +31,13 @@ Data Source: Life Expectancy (WHO) Statistical Analysis on factors influencing L
 focus around regression (continuous outcome variable) 
 
  Country
+ 
  Adult Mortality
+ 
  HIV/AIDS
+ 
  Income composition of resources
+ 
  Life expectancy
  
 The variable tested was Life expectancy
