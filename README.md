@@ -1,16 +1,53 @@
 # AutoML
 HHA507_assignment_9
-1. Create a new github repo called 'AutoML examples' 
 
-2. Select a dataset of your own choosing (or select my modified version of SPARCS - https://raw.githubusercontent.com/hantswilliams/HHA-507-2022/main/autoML/datasets/data_sparcs.csv) 
+Experiment #1
+Data Source:  Healthcare Associated Infections
+Focus on classification (binary or multi-class outcome variable)
 
-3. Create two 'experiments' using the autoML package mljar-supervised 
-One that is focused around classification (binary or multi-class outcome variable)
-One that is focused around regression (continuous outcome variable) 
-4. Include the output of the mljar-supervised output folder inside of the github repo (e.g., so there should be 2 folders - one for classification and one for regression) 
+Measure ID (categorical)
+Compared to National (continuous)
+score
 
-5. In a markdown file (readme.md): 
-    - Describe the two dependent variables (outcomes) for experiment 1 and experiment 2 
-    - Describe for each experiment: 
-        - What was the best performing model (please interpret (a) log-loss or RMSE between models, and (b) AUC) 
-        - How much better (? if any) did the model perform compared to baseline
+The variable tested was score
+
+Per AutoML, the best model was Default_Xgboost
+
+## Metric details
+|           |     score |     threshold |
+|:----------|----------:|--------------:|
+| logloss   | 0.0287939 | nan           |
+| auc       | 0.998495  | nan           |
+| f1        | 0.984664  |   0.942205    |
+| accuracy  | 0.972838  |   0.942205    |
+| precision | 1         |   0.999999    |
+| recall    | 1         |   9.06675e-08 |
+| mcc       | 0.873128  |   0.942205    |
+
+Compared to Baseline, the model performed the best
+---------------------------------------------------------------------------------------------------------------------------------------------
+2. Experiment #2
+Data Source: Life Expectancy (WHO) Statistical Analysis on factors influencing Life Expectancy (LifeExpectancyData.csv)
+focus around regression (continuous outcome variable) 
+
+ Country
+ Adult Mortality
+ HIV/AIDS
+ Income composition of resources
+ Life expectancy
+ 
+The variable tested was Life expectancy
+
+Per AutoML, the best model was the Ensemble
+
+### Metric details:
+| Metric   |    Score |
+|:---------|---------:|
+| MAE      | 1.09375  |
+| MSE      | 3.08404  |
+| RMSE     | 1.75614  |
+| R2       | 0.965513 |
+| MAPE     | 0.016699 |
+
+Compared to Baseline, the model performed worse
+
